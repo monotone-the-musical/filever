@@ -1,0 +1,3 @@
+environments/*
+dist/*
+src/filever.egg-info/*
