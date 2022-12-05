@@ -1,6 +1,6 @@
 [project]
 name = "filever"
-version = "0.1.0"
+version = "1.0.0"
 authors = [
   { name="MTM", email="monotone.the.musical@gmail.com" },
 ]
