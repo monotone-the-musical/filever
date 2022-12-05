@@ -1,0 +1,22 @@
+[project]
+name = "filever"
+version = "0.1.0"
+authors = [
+  { name="MTM", email="monotone.the.musical@gmail.com" },
+]
+description = "filever: the file versioner utility."
+readme = "README.md"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: POSIX :: Linux",
+]
+
+[project.urls]
+"Homepage" = "https://github.com/monotone-the-musical/filever"
+"Bug Tracker" = "https://github.com/monotone-the-musical/filever/issues"
+
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
