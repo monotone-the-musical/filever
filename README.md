@@ -29,7 +29,7 @@ Why?
  - remembers the permissions of the file when backed up
  - ability to restore to a new name if required
  - ensures you don't back up duplicates
- - ensures you don't accidentally restore over a file you haven't yet backed up
+ - warns you before accidentally restoring over a file you haven't yet backed up
  - browse vault contents for specific files or directories, or even the entire vault
  - ability to delete files from the vault you no longer need
 
