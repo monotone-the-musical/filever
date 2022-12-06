@@ -82,6 +82,10 @@ Run 'fver -h' for all syntax
 
 * *Filever* is not intended as a complete *system* backup solution, nor is it a complete *version-control* system (i.e. GIT). It is merely a command-line tool to help with your day-to-day workflow.
 
+### Credits ###
+
+*Filever* shamelessly uses code taken from the awesome *pick* library: https://github.com/wong2/pick
+
 ### contact ###
 
 * monotone.the.musical@gmail.com
