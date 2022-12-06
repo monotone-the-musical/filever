@@ -84,7 +84,7 @@ Run 'fver -h' for all syntax
 
 ### Credits ###
 
-*Filever* shamelessly uses code taken from the awesome *pick* library: https://github.com/wong2/pick
+ - *Filever* shamelessly uses code taken from the awesome *pick* library: https://github.com/wong2/pick
 
 ### contact ###
 
