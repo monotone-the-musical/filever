@@ -12,7 +12,7 @@ import re
 import json
 from os.path import expanduser
 from os.path import basename
-from filever import pick
+from pick import pick
 from operator import itemgetter
 
 # self.vault    (default: "~/.vault/")
@@ -181,9 +181,9 @@ class loadfile(object):
         menulist.append(" %s %11d %s%s %s" % (arecord[3],arecord[6],basename(arecord[1]),arecord[2],arecord[4]))
       menulist.append(" abort")
       if delfile:
-        option, index = pick.pick(menulist, "Backups available for deletion from vault:")
+        option, index = pick(menulist, "Backups available for deletion from vault:")
       else:
-        option, index = pick.pick(menulist, "Backups available for specified directory:")
+        option, index = pick(menulist, "Backups available for specified directory:")
       if option == " abort":
         print ("\ncancelled\n")
         sys.exit()
@@ -222,10 +222,10 @@ class loadfile(object):
         menulist.append(" %s %11d %s%s %s" % (arecord[3],arecord[6],basename(arecord[1]),arecord[2],arecord[4]))
       menulist.append(" abort")
       if delfile:
-        option, index = pick.pick(menulist, "Versions available for removal from vault:")
+        option, index = pick(menulist, "Versions available for removal from vault:")
       else:
         if not latest and len(versionlist) > 1:
-          option, index = pick.pick(menulist, "Versions available:")
+          option, index = pick(menulist, "Versions available:")
         else:
           option = ""
           index=0

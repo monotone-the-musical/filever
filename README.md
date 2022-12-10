@@ -3,7 +3,13 @@
 ### Installation
 
 ```sh
-$ pip install filever
+$ pip3 install -r ./requirements.txt
+```
+
+or to install manually:
+
+```sh
+$ pip3 install pick==2.2.0 filever
 ```
 
 ### Description
@@ -36,6 +42,7 @@ Why?
 ### Dependencies
 
  - Python 3
+ - [pick](https://github.com/wong2/pick)
 
 ### Instructions ###
 
@@ -81,10 +88,6 @@ Run 'fver -h' for all syntax
 ### Note ###
 
 * *Filever* is not intended as a complete *system* backup solution, nor is it a complete *version-control* system (i.e. GIT). It is merely a command-line tool to help with your day-to-day workflow.
-
-### Credits ###
-
- - *Filever* shamelessly uses code taken from the awesome *pick* library: https://github.com/wong2/pick
 
 ### contact ###
 

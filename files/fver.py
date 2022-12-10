@@ -1,7 +1,6 @@
 #!/usr/bin/env python3
 
 from filever import loadfile
-from filever import pick
 import argparse
 
 # parameters
