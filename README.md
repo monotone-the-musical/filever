@@ -22,7 +22,7 @@ Do this:
 $ fver -b ./someapp.conf -c original
 ```
 
-Why?
+**Why?**
 
  - easily swap between multiple versions of a file (handy when testing different options in a config file)
  - keep your directories clean (backed up files are kept hidden in a vault)
@@ -86,3 +86,4 @@ Run 'fver -h' for all syntax
 ### contact ###
 
 * monotone.the.musical@gmail.com
+* [Issues](https://github.com/monotone-the-musical/filever/issues)
