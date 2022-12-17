@@ -12,6 +12,10 @@ classifiers = [
     "Operating System :: POSIX :: Linux",
 ]
 
+dependencies = [
+  "pick > 2.0.0"
+]
+
 [project.urls]
 "Homepage" = "https://github.com/monotone-the-musical/filever"
 "Bug Tracker" = "https://github.com/monotone-the-musical/filever/issues"

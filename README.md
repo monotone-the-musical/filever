@@ -3,13 +3,7 @@
 ### Installation
 
 ```sh
-$ pip3 install -r ./requirements.txt
-```
-
-or to install manually:
-
-```sh
-$ pip3 install pick==2.2.0 filever
+$ pip3 install filever
 ```
 
 ### Description
