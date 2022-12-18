@@ -3,7 +3,7 @@
 ### Installation
 
 ```sh
-$ pip install filever
+$ pip3 install filever
 ```
 
 ### Description
@@ -22,20 +22,21 @@ Do this:
 $ fver -b ./someapp.conf -c original
 ```
 
-Why?
+**Why?**
 
  - easily swap between multiple versions of a file (handy when testing different options in a config file)
  - keep your directories clean (backed up files are kept hidden in a vault)
  - remembers the permissions of the file when backed up
  - ability to restore to a new name if required
  - ensures you don't back up duplicates
- - ensures you don't accidentally restore over a file you haven't yet backed up
+ - warns you before accidentally restoring over a file you haven't yet backed up
  - browse vault contents for specific files or directories, or even the entire vault
  - ability to delete files from the vault you no longer need
 
 ### Dependencies
 
  - Python 3
+ - [pick](https://github.com/wong2/pick)
 
 ### Instructions ###
 
@@ -85,3 +86,4 @@ Run 'fver -h' for all syntax
 ### contact ###
 
 * monotone.the.musical@gmail.com
+* [Issues](https://github.com/monotone-the-musical/filever/issues)

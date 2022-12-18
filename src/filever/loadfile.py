@@ -12,7 +12,7 @@ import re
 import json
 from os.path import expanduser
 from os.path import basename
-from filever import pick
+from pick import pick
 from operator import itemgetter
 
 # self.vault    (default: "~/.vault/")
@@ -94,7 +94,6 @@ class loadfile(object):
   def backup(self):
     newhash=False
     updatedhash=False
-    # debug
     hashexists,fileexists = check_if_exists(self.meta,self.vtable)
     if not hashexists: # file has never been backed up, not in vault
       self.vtable[self.meta[0]]=self.meta[1:]
@@ -110,7 +109,7 @@ class loadfile(object):
     return [newhash,updatedhash]
 
   def list_backups_by_hash(self):
-    if check_if_exists(self.meta,self.vtable)[0]:  # if hash exists
+    if check_if_exists(self.meta,self.vtable)[0]:
       fndict_from_vault=self.vtable[self.meta[0]][0]
       localfilename=list(self.meta[1].keys())[0]
       if ( (len(fndict_from_vault) != 1 and localfilename not in fndict_from_vault.keys()) or len(fndict_from_vault) > 1):
@@ -181,15 +180,15 @@ class loadfile(object):
         menulist.append(" %s %11d %s%s %s" % (arecord[3],arecord[6],basename(arecord[1]),arecord[2],arecord[4]))
       menulist.append(" abort")
       if delfile:
-        option, index = pick.pick(menulist, "Backups available for deletion from vault:")
+        option, index = pick(menulist, "Backups available for deletion from vault:")
       else:
-        option, index = pick.pick(menulist, "Backups available for specified directory:")
+        option, index = pick(menulist, "Backups available for specified directory:")
       if option == " abort":
         print ("\ncancelled\n")
         sys.exit()
-      hash_to_restore = ("%s" % (versionlist[index][0]))  #FIX?
-      file_to_restore = ("%s" % (versionlist[index][1]))  #FIX?
-      file_permissions = ("%s" % (versionlist[index][5])) #FIX?
+      hash_to_restore = ("%s" % (versionlist[index][0]))
+      file_to_restore = ("%s" % (versionlist[index][1]))
+      file_permissions = ("%s" % (versionlist[index][5]))
       if self.newname:
         file_to_restore=self.newname
       copyfile(self.vault+"/versions/"+hash_to_restore,file_to_restore,self.vault,delfile,hash_to_restore)
@@ -222,10 +221,10 @@ class loadfile(object):
         menulist.append(" %s %11d %s%s %s" % (arecord[3],arecord[6],basename(arecord[1]),arecord[2],arecord[4]))
       menulist.append(" abort")
       if delfile:
-        option, index = pick.pick(menulist, "Versions available for removal from vault:")
+        option, index = pick(menulist, "Versions available for removal from vault:")
       else:
         if not latest and len(versionlist) > 1:
-          option, index = pick.pick(menulist, "Versions available:")
+          option, index = pick(menulist, "Versions available:")
         else:
           option = ""
           index=0
@@ -253,7 +252,7 @@ class loadfile(object):
     versionlist=[]
     for vaulthash, vaultval in self.vtable.items():
       for thefilename, comment in vaultval[0].items(): 
-        versionlist.append([vaulthash,thefilename,"   ",vaultval[5],comment,vaultval[6]]) #UPTO
+        versionlist.append([vaulthash,thefilename,"   ",vaultval[5],comment,vaultval[6]])
     if len(versionlist) > 0:
       versionlist=sorted(versionlist, key=itemgetter(3))
       print ("\nVault Contents:\n")
@@ -280,7 +279,7 @@ def vaultfio(iotype,vault,vtable={}):
   if iotype == "write":
     with open(vault+"/versions.table","w") as outputfile: 
       json.dump(vtable, outputfile)
-    copyfile(vault+"/versions.table", vault+"/versions/",vault) #make a backup of the vault
+    copyfile(vault+"/versions.table", vault+"/versions/",vault) # make a backup of the vault
   elif iotype == "read":
     with open(vault+"/versions.table","r") as inputfile: 
       try:

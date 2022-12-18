@@ -1,15 +1,19 @@
 [project]
 name = "filever"
-version = "1.0.0"
+version = "1.0.1"
 authors = [
   { name="MTM", email="monotone.the.musical@gmail.com" },
 ]
-description = "filever: the file versioner utility."
+description = "filever: cli file backup solution."
 readme = "README.md"
 classifiers = [
     "Programming Language :: Python :: 3",
     "License :: OSI Approved :: MIT License",
     "Operating System :: POSIX :: Linux",
+]
+
+dependencies = [
+  "pick > 2.0.0"
 ]
 
 [project.urls]
