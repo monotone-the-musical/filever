@@ -3,8 +3,11 @@
 ### Installation
 
 ```sh
-$ pip3 install filever
+$ pipx install filever
 ```
+
+Ensure you use ```pipx``` to install globally without polluting your system-wide packages.
+
 
 ### Description
 
